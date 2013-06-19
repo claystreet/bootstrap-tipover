@@ -1,8 +1,9 @@
 //--- Custom Bootstrap Popover Styling ---
 
 // Full specification
-// Note: 4 or more parameters must be specified for this full spec to be used directly
-//       otherwise the simple version below will be used
+// Note: 4 or 5 parameters must be specified for this full spec to be used directly
+//       if fewer parameters then the simple version below will be used
+//       if 7 parameters then the full spec + outermost border version below will be used
 .popover-custom(@textColor; @bkgdColor; @titleColor; @titleBkgd; @titleBorder: #ebebeb;) {
   color: @textColor;
   background-color: @bkgdColor;

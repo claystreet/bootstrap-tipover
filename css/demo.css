@@ -168,3 +168,42 @@
 .popover.blueWhite.left .arrow:after {
   border-left-color: #ffffff;
 }
+.popover.blueWhiteblue {
+  border-color: #00aaff;
+  border-color: rgba(0, 200, 255, 0.25);
+  color: #333333;
+  background-color: #ffffff;
+}
+.popover.blueWhiteblue .popover-title {
+  color: #ffffff;
+  background-color: #0088cc;
+  border-bottom-color: #0066aa;
+}
+.popover.blueWhiteblue.top .arrow:after {
+  border-top-color: #ffffff;
+}
+.popover.blueWhiteblue.right .arrow:after {
+  border-right-color: #ffffff;
+}
+.popover.blueWhiteblue.bottom .arrow:after {
+  border-bottom-color: #ffffff;
+}
+.popover.blueWhiteblue.left .arrow:after {
+  border-left-color: #ffffff;
+}
+.popover.blueWhiteblue.top .arrow {
+  border-top-color: #00aaff;
+  border-top-color: rgba(0, 200, 255, 0.25);
+}
+.popover.blueWhiteblue.right .arrow {
+  border-right-color: #00aaff;
+  border-right-color: rgba(0, 200, 255, 0.25);
+}
+.popover.blueWhiteblue.bottom .arrow {
+  border-bottom-color: #00aaff;
+  border-bottom-color: rgba(0, 200, 255, 0.25);
+}
+.popover.blueWhiteblue.left .arrow {
+  border-left-color: #00aaff;
+  border-left-color: rgba(0, 200, 255, 0.25);
+}
