@@ -24,6 +24,7 @@ custom class.
 ### How does it work?
 
 There are 3 key files provided with this "tipover" solution:
+
 1. tipover.js
 2. tooltip-custom.less
 3. popover-custom.less
@@ -46,7 +47,7 @@ $(document).ready(function() {
 *tooltip-custom.less* - contains less mixins to allow custom tooltip styles to be easily generated.
 For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be generated as follows:
 
-```less
+```css
 .tooltip.gray {
   .tooltip-custom-opacity(#fff; #555; 90); // background-color, text-color, opacity
 }
@@ -59,14 +60,19 @@ For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be
 
 *popover-custom.less* - contains less mixins to allow custom popover styles to be easily generated.
 
+Javascript to initialize custom styled Bootstrap popovers:
 ```javascript
 $(document).ready(function() {
+
+    // initialize '.blackPop' elements to use the 'popover.black' style
     $('.blackPop').popover(poOptions('black', {
         'placement': 'right',
         'html': true,
         'title': 'Custom Black Popover',
         'content': ' This is my custom popover<br>It is a simple black popover'
     }));
+    
+    // initialize '.blueWhitePop' elements to use the 'popover.blueWhite' style
     $('.blueWhitePop').popover(poOptions('blueWhite', {
         'placement': 'right',
         'html': true,
@@ -78,7 +84,7 @@ $(document).ready(function() {
 ```
 
 The associated less file would include the following:
-```less
+```css
 .popover.black {
   .popover-custom-dark(#000); // #000 = content background-color, other colors auto-generated from that
 }
