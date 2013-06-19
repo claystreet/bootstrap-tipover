@@ -34,7 +34,7 @@ These functions return an "option" object that includes a template with the spec
 Other tooltip and popover options can be passed as the second parameter.
 
 * ttOptions('className', additionalOptions) - returns tooltip options with a template containing 'tooltip.className'
-* poOptions('className', additionalOptions) - returns popover options with a template containing 'tooltip.className'
+* poOptions('className', additionalOptions) - returns popover options with a template containing 'popover.className'
 
 The following Javascript initializes two custom tooltip styles:
 ```javascript
@@ -49,8 +49,8 @@ $(document).ready(function() {
 ```
 
 *tooltip-custom.less* - contains less mixins to allow custom tooltip styles to be easily generated.
-For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be generated as follows:
 
+For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be generated as follows:
 ```css
 .tooltip.gray {
   .tooltip-custom-opacity(#fff; #555; 90); // background-color, text-color, opacity
@@ -64,7 +64,7 @@ For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be
 
 *popover-custom.less* - contains less mixins to allow custom popover styles to be easily generated.
 
-Javascript to initialize custom styled Bootstrap popovers:
+Javascript to initialize two custom styled Bootstrap popovers:
 ```javascript
 $(document).ready(function() {
 
