@@ -31,8 +31,12 @@ There are 3 key files provided with this "tipover" solution:
 
 *tipover.js* - contains two simple functions intended to be invoked when initializing tooltips and popovers in JavaScript.
 These functions return an "option" object that includes a template with the specified custom className included.
-Other tooltip and popover options can be passed as the second parameter.  For example:
+Other tooltip and popover options can be passed as the second parameter.
 
+* ttOptions('className', additionalOptions) - returns tooltip options with a template containing 'tooltip.className'
+* poOptions('className', additionalOptions) - returns popover options with a template containing 'tooltip.className'
+
+The following Javascript initializes two custom tooltip styles:
 ```javascript
 $(document).ready(function() {
     // initialize all elements with the 'grayTip' class to use the 'tooltip.gray' style
@@ -40,7 +44,7 @@ $(document).ready(function() {
     
     // initialize all elements with the 'whiteBlueTip' class to use the 'tooltip.whiteBlue' style
     // ...additionally, specify the 'placement' option to provide a right-side tooltip
-    $('.whiteBlueTip').tooltip(ttOptions('whiteBlue'), {'placement': 'right'}); 
+    $('.whiteBlueTip').tooltip(ttOptions('whiteBlue', {'placement': 'right'})); 
 });
 ```
 
