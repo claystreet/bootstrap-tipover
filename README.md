@@ -53,11 +53,11 @@ $(document).ready(function() {
 For example, the 'gray' and 'whiteBlue' styles for the JavaScript above could be generated as follows:
 ```css
 .tooltip.gray {
-  .tooltip-custom-opacity(#fff; #555; 90); // background-color, text-color, opacity
+  .tooltip-custom-opacity(#fff; #555; 90); // text-color, background-color, opacity
 }
 
 .tooltip.whiteBlue {
-  .tooltip-custom-opacity(#08c; #fff; #08c; 90);  // background-color, text-color, border-color, opacity
+  .tooltip-custom-opacity(#08c; #fff; #08c; 90);  // text-color, background-color, border-color, opacity
 }
 
 ```
