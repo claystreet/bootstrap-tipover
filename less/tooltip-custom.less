@@ -1,0 +1,52 @@
+//--- Custom Bootstrap Tooltip Styling ---
+
+// Used internally by the mixins below
+.tooltip-arrow-custom (@color) {
+  &.top .tooltip-arrow {
+    border-top-color: @color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @color;
+  }
+}
+// No border
+.tooltip-custom(@textColor; @bkgdColor) {
+  .tooltip-inner {
+    color: @textColor;
+    background-color: @bkgdColor;
+  }
+  .tooltip-arrow-custom(@bkgdColor);
+}
+// No border and custom opacity (necessary when the default opacity=80 is insufficient)
+.tooltip-custom-opacity(@textColor; @bkgdColor; @opacityVal) {
+  .tooltip-custom(@textColor; @bkgdColor);
+  &.in {
+    opacity: (@opacityVal / 100);
+    filter: ~"alpha(opacity=@{opacityVal})";
+  }
+}
+
+// With border
+.tooltip-custom(@textColor; @bkgdColor; @borderColor) {
+  .tooltip-inner {
+    color: @textColor;
+    background-color: @bkgdColor;
+    border: 1px solid @borderColor;
+  }
+  .tooltip-arrow-custom(@borderColor);
+}
+// With border and custom opacity (necessary when the default opacity=80 is insufficient)
+.tooltip-custom-opacity(@textColor; @bkgdColor; @borderColor; @opacityVal) {
+  .tooltip-custom(@textColor; @bkgdColor; @borderColor);
+  &.in {
+    opacity: (@opacityVal / 100);
+    filter: ~"alpha(opacity=@{opacityVal})";
+  }
+}
+

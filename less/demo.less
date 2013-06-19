@@ -1,0 +1,41 @@
+/* NOTE: this file was created from less/demo.less */
+
+//--- import the tipover mixins ---
+@import "tooltip-custom.less";
+@import "popover-custom.less";
+
+/*--- custom styled tooltips for the demo ---*/
+
+.tooltip.gray {
+  .tooltip-custom-opacity(#fff; #555; 90);
+}
+
+.tooltip.yellow {
+  .tooltip-custom-opacity(#000; #FFFFD0; #000; 95);
+}
+
+.tooltip.lightgrayRed {
+  .tooltip-custom-opacity(#f33; #f0f0f0; #333; 95);
+}
+
+.tooltip.whiteBlue {
+  .tooltip-custom-opacity(#08c; #fff; #08c; 90);
+}
+
+/*--- custom styled popovers for the demo ---*/
+
+.popover.white {
+  .popover-custom(#fff);
+}
+
+.popover.lime {
+  .popover-custom(#f0ffe0);
+}
+
+.popover.black {
+  .popover-custom-dark(#000);
+}
+
+.popover.blueWhite {
+  .popover-custom(#333, #fff, #fff, #08c, #06a);
+}

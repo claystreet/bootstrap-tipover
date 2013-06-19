@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootstrap Tipover Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <style>
+        .tip, .pop {
+            border-bottom: 1px dotted #999999;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageContainer" class="container">
+        <h3>Bootstrap Tipover Demo</h3>
+        <p class="lead">This page demonstrates how to create custom styled tooltips and popovers
+            in twitter Bootstrap.
+        </p>
+        <h4>Tooltips</h4>
+        <p>Here is a <span class="tip defaultTip" title="Bootstrap Default Tooltip">default tooltip</span>.  It's pretty good
+        but not always what you want.
+        </p>
+        <p>Here is a <span class="tip grayTip" title="A Custom Gray Tooltip">custom gray tooltip</span>.
+        </p>
+        <p>And a <span class="tip yellowTip" title="yellow with border!">yellow tooltip</span> with a border.
+        </p>
+        <p>Different <span class="tip multiTip" title="Red text with dark gray border">border and text</span> colors.
+        <p>Finally, some pretty white &amp; blue tips:
+            <span class="tip wbTip" title="Left" data-placement="left">&nbsp;&nbsp;left</span>
+            <span class="tip wbTip" title="Top" data-placement="top">top</span>
+            <span class="tip wbTip" title="Bottom" data-placement="bottom">bottom</span>
+            <span class="tip wbTip" title="Right" data-placement="right">right</span>
+        </p>
+        <h4>Popovers</h4>
+        <p><span class="pop defaultPop">Bootstrap Default Popover</span></p>
+        <p><span class="pop whitePop">A Simple White Popover</span> (very similar to the default)</p>
+        <p><span class="pop limePop">A Simple Lime Popover</span></p>
+        <p><span class="pop blackPop">A Simple Black Popover</span></p>
+        <p><span class="pop blueWhitePop">A Blue and White Popover</span></p>
+        
+        <p style="margin: 20px 0 20px 0;">Copyright &copy; 2013 <a href="http://www.claystreet.com">Clay Street Online LLC</a>.  All Rights Reserved.</p>
+    </div> <!-- pageContainer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/bootstrap-2.3.2.min.js"></script>
+    <script src="js/tipover.js"></script>
+    <script>
+        $(document).ready(function() {
+        
+            //--- Initialize the tooltips ---
+            $('.defaultTip').tooltip();
+            $('.grayTip').tooltip(ttOptions('gray'));
+            $('.yellowTip').tooltip(ttOptions('yellow'));
+            $('.multiTip').tooltip(ttOptions('lightgrayRed'));
+            $('.wbTip').tooltip(ttOptions('whiteBlue'));
+            
+            //--- Initialize the popovers ---
+            var demoOptions = {
+                'placement': 'right',
+                'html': true,
+                'title': "Bootstrap Popover",
+                'content': "As the name implies...<br>Bootstrap is a great place to start!"
+            };
+
+            $('.defaultPop').popover(demoOptions);
+            $('.whitePop').popover(poOptions('white', demoOptions));
+            $('.limePop').popover(poOptions('lime', demoOptions));
+            $('.blackPop').popover(poOptions('black', demoOptions));
+            $('.blueWhitePop').popover(poOptions('blueWhite', demoOptions));
+        });
+    </script>
+</body>
+</html>
